@@ -89,7 +89,7 @@ def timeaggregate(df, aggregateperiodsize, timevarname = 'time', offset = 0, agg
     if replacetimevar is True:
         df = df.drop('time', axis = 1)
         df['time'] = df.index
-        del df.index.name
+        df.index.name = ''
 
     return(df)
     
